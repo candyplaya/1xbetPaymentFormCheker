@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const cheking1xStart = require('./paymentFormCheker');
 
-const token = '2071463652:AAE1FYpYBn6kGrt26JAhzlbSw3DUNtAFu18';
+const token = '{{BOT_TOKEN_TG}}';
 const bot = new TelegramBot(token, { polling: true });
 
 bot.onText(/\/1xbet/, async (msg) => {
