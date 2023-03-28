@@ -1,0 +1,17 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first.spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^19.8.1",
+    "node-telegram-bot-api": "^0.61.0",
+    "puppeteer": "^19.7.3",
+    "telegram-bot-api": "^2.0.1"
+  }
+}
