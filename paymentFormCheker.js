@@ -1,21 +1,36 @@
 const puppeteer = require('puppeteer')
 
 async function cheking1xStart() {
-    const browser = await puppeteer.launch({ headless: false })
+    const browser = await puppeteer.launch(
+        {
+            headless: false,
+            args: ['--no-sandbox'],
+            // executablePath: '/home/qa@kadmin/.config/google-chrome/default'
+        }
+    )
     const page = await browser.newPage()
+    await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36');
+
+    await page.setViewport({
+        width: 1600,
+        height: 1300
+    });
+
+
     let frameHandle
     let frame
     let payUrl
-    const mirrorUrl = 'https://1xlite-723996.top/ru'
+    const mirrorUrl = 'https://lite-1x05933835.top'
     const methodChekingArray = []
     // const methodArray = ['visa: ', 'mastercard: ', 'mir: ', 'maestro: ']
     const methodArray = ['visa: ', 'maestro: ']
     const result = [];
 
     await page.goto(mirrorUrl)
+    // await new Promise(resolve => setTimeout(resolve, 70000));
     await new Promise(resolve => setTimeout(resolve, 7000));
-    await getLoginWindow()
-    // await inputLoginAcc()
+    // await getLoginWindow()
+    await inputLoginAcc()
     await takeUrlForMethod('visa')
     // await page.goto(mirrorUrl)
     // await takeUrlForMethod('mastercard')
@@ -25,7 +40,7 @@ async function cheking1xStart() {
     await takeUrlForMethod('maestro')
 
     for (i = 0; i < methodArray.length; i++) {
-        result.push(methodArray[i]+methodChekingArray[i])
+        result.push(methodArray[i] + methodChekingArray[i])
     }
 
     await browser.close()
@@ -67,13 +82,20 @@ async function cheking1xStart() {
         await frame.click('#deposit_button')
     }
 
-    // async function inputLoginAcc() {
-    //      findElementOnValueAndClick('.caption__label', 'Регистрация')
-    //      findElementOnValueAndClick('.caption__label', 'В 1 клик')
-    //      new Promise(resolve => setTimeout(resolve, 5000));
-    //      findElementOnValueAndClick('.caption__label', 'Зарегистрироваться')
-    //      findElementOnValueAndClick('.registration-field-checkbox__label', 'Нажимая кнопку, вы подтверждаете, что ознакомились и соглашаетесь с ')
-    // }
+    async function inputLoginAcc() {
+        findElementOnValueAndClick('.caption__label', 'Регистрация')
+        new Promise(resolve => setTimeout(resolve, 5000));
+
+        await page.waitForSelector('.registration-content__container');
+        await page.focus('.registration-content__container')
+
+        findElementOnValueAndClick('.caption__label', 'В 1 клик')
+        new Promise(resolve => setTimeout(resolve, 5000));
+
+        findElementOnValueAndClick('.caption__label', 'Зарегистрироваться')
+        new Promise(resolve => setTimeout(resolve, 5000));
+
+    }
 
     async function getLoginWindow() {
         findElementOnValueAndClick('.caption__label', 'Вход');
@@ -104,11 +126,11 @@ async function cheking1xStart() {
         await new Promise(resolve => setTimeout(resolve, 5000));
         const elements = await page.$$(elm);
         for (let element of elements) {
-          const text = await element.evaluate(node => node.textContent);
-          if (text.trim() === value) {
-            await element.click();
-            break;
-          }
+            const text = await element.evaluate(node => node.textContent);
+            if (text.trim() === value) {
+                await element.click();
+                break;
+            }
         }
     }
 
