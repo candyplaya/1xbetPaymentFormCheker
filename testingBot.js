@@ -27,7 +27,7 @@ try {
 
         bot.once('message', async (msg) => {
             newUrlMelbet = msg.text;
-            bot.sendMessage(chatId, `Для 1xbet установлен melbet: ${newUrlMelbet}`);
+            bot.sendMessage(chatId, `Для melbet установлен url: ${newUrlMelbet}`);
         });
     });
 
@@ -37,7 +37,7 @@ try {
 
         bot.once('message', async (msg) => {
             newUrlBetwinner = msg.text;
-            bot.sendMessage(chatId, `Для 1xbet установлен Betwinner: ${newUrlBetwinner}`);
+            bot.sendMessage(chatId, `Для Betwinner установлен url: ${newUrlBetwinner}`);
         });
     });
 
