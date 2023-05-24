@@ -3,9 +3,9 @@ const puppeteer = require('puppeteer')
 async function cheking1xStart(bettingUrl) {
     const browser = await puppeteer.launch(
         {
-            headless: false,
+            headless: true,
             args: ['--no-sandbox'],
-            executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe'
+//             executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe'
         }
     )
     const page = await browser.newPage()
