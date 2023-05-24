@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer')
 async function cheking1xStart(bettingUrl) {
     const browser = await puppeteer.launch(
         {
-            headless: true,
+            headless: false,
             args: ['--no-sandbox'],
         }
     )
