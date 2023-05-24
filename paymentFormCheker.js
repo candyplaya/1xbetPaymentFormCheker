@@ -5,6 +5,7 @@ async function cheking1xStart(bettingUrl) {
         {
             headless: false,
             args: ['--no-sandbox'],
+            executablePath: '/usr/bin/chromium-browser'
         }
     )
     const page = await browser.newPage()
