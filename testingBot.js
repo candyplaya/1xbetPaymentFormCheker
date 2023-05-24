@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const cheking1xStart = require('./paymentFormCheker');
 
 
-const token = '~TOKEN~';
+const token = '2071463652:AAHPG6Wm5I3fe6VnxI2944tAyTyyNKQAYW8';
 const bot = new TelegramBot(token, { polling: true });
 
 let newUrl1x = 'Не задано'
