@@ -1,0 +1,56 @@
+{
+  "app":"happ_android",
+  "ret": 1,
+  "msg": "ok",
+  "data": "0.0.5",
+  "link": "https://drive.google.com/file/d/1W80i-sEY4p1qX6hnqFQUbQ8bdZ0H9HlH/view?usp=sharing",
+  "details": "1. Old release\n2. Some fixes",
+  "filenum": 123,
+  "apk": {
+    "block": [
+      "0.0.1",
+      "123"
+    ],
+    "beta": {
+      "version": "1.0.2",
+      "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.1/Happ_1.0.1_all.apk",
+      "details": "1. Old release\n2. Some fixes",
+      "update": {
+        "nowarn": "1.0.1",
+        "warnonce": "0.3.5",
+        "warnweek": "0.3.4",
+        "warnalways": "0.0.4",
+        "updateonly": "0.0.3"
+      }
+    },
+    "stable": {
+      "version": "1.0.0",
+      "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.0/Happ_1.0.0_all.apk",
+      "details": "1. Old release\n2. Some fixes",
+      "update": {
+        "nowarn": "0.4.1",
+        "warnonce": "0.3.4",
+        "warnweek": "0.3.3",
+        "warnalways": "0.0.4",
+        "updateonly": "0.0.2"
+      }
+    }
+  },
+  "google": {
+    "block": [
+      "0.0.2",
+      "124"
+    ],
+    "stable": {
+      "version": "1.0.0",
+      "details": "1. Old release\n2. Some fixes",
+      "update": {
+        "nowarn": "0.4.1",
+        "warnonce": "0.4.1",
+        "warnweek": "0.3.5",
+        "warnalways": "0.0.4",
+        "updateonly": "0.0.3"
+      }
+    }
+  }
+}
