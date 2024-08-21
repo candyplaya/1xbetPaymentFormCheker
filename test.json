@@ -12,7 +12,7 @@
       "123"
     ],
     "beta": {
-      "version": "1.0.2",
+      "version": "1.0.5",
       "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.1/Happ_1.0.1_all.apk",
       "details": "1. Old release\n2. Some fixes",
       "update": {
@@ -24,7 +24,7 @@
       }
     },
     "stable": {
-      "version": "1.0.0",
+      "version": "1.0.5",
       "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.0/Happ_1.0.0_all.apk",
       "details": "1. Old release\n2. Some fixes",
       "update": {
