@@ -28,11 +28,11 @@
       "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.0/Happ_1.0.0_all.apk",
       "details": "1. Old release\n2. Some fixes",
       "update": {
-        "nowarn": "0.4.1",
-        "warnonce": "0.3.4",
-        "warnweek": "0.3.3",
+        "nowarn": "2.0.0",
+        "warnonce": "0.3.5",
+        "warnweek": "0.3.4",
         "warnalways": "0.0.4",
-        "updateonly": "0.0.2"
+        "updateonly": "0.0.3"
       }
     }
   },
