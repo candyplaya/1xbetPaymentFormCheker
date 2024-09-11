@@ -24,7 +24,7 @@
       }
     },
     "stable": {
-      "version": "1.0.0",
+      "version": "1.9.0",
       "link": "https://github.com/FlyFrg/Happ_android_update/releases/download/1.0.0/Happ_1.0.0_all.apk",
       "details": "1. Old release\n2. Some fixes",
       "update": {
