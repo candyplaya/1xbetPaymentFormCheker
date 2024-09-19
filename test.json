@@ -13,7 +13,7 @@
     ],
     "beta": {
       "version": "1.2.0",
-      "link": "https://github.com/candyplaya/Temp-Rep/raw/main/Happ_1.1.0_1037_all.apk",
+      "link": "https://github.com/candyplaya/Temp-Rep/blob/main/Happ_1.1.0_1037_all.apk?raw=true",
       "details": "1. Old release\n2. Some fixes",
       "update": {
         "nowarn": "2.0.0",
